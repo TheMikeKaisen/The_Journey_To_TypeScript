@@ -52,5 +52,8 @@ let person6 = { ...person5 };
 console.log("person6:", person6);
 person6.firstName = "hari";
 person6.address.city = "kerala";
-console.log("person5:", person5);
+console.log("person5:", person5); // firstName: "Karthik" (unchanged) address: {city: "kerala" (changed)}
 console.log("person6:", person6);
+// why does this happen?
+// objects are passed as reference. so address has a reference to the object {city:"jaipur", state:"rajasthan"}
+// so during shallow copy, though a new memory of provided to the object, "address" key still has a reference to the value {}
