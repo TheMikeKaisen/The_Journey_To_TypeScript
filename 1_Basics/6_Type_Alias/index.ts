@@ -58,6 +58,7 @@ let emp1: Employee = {
 }
 
 
+
 // 6. Using type alias in function parameters
 function printUser(user: User): string {
     return user.email 
